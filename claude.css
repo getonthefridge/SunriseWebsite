@@ -1,0 +1,481 @@
+/* ============================================
+   SUNRISE SPINE — Professional Medical CSS
+   Theme: Teal & Sunrise Orange
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500;600&display=swap');
+
+/* ── Reset & Base ── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --blue: #4f8586;
+    --blue-dark: #3a6667;
+    --blue-light: #6aa4a5;
+    --blue-muted: #eef4f4;
+    --orange: #f1953b;
+    --orange-dark: #d97d28;
+    --orange-light: #f7b472;
+    --border: #e5e7eb;
+    --text: #374151;
+    --text-light: #6b7280;
+    --text-lighter: #9ca3af;
+    --banner-background: white;
+    --cream: #fafaf9;
+
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Jost', sans-serif;
+
+    --shadow-sm: 0 1px 6px rgba(79, 133, 134, 0.08);
+    --shadow-md: 0 6px 24px rgba(79, 133, 134, 0.14);
+    --shadow-lg: 0 16px 48px rgba(79, 133, 134, 0.18);
+
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ── Header ── */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--banner-background);
+    box-shadow: 0 2px 16px rgba(79, 133, 134, 0.1);
+}
+
+.logo-banner-area {
+    /* flex-direction: column; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 48px;
+    border-bottom: 1px solid var(--border);
+}
+
+.banner-img {
+    /* height: 1%; */
+    max-width: 50%;
+    max-height: 75px;
+    width: auto;
+    object-fit: contain;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-family: var(--font-body);
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    transition: color var(--transition);
+}
+
+.contact-info a:hover {
+    color: var(--blue);
+}
+
+.contact-info a#phone-number p {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--blue);
+}
+
+.contact-info p {
+    margin: 0;
+}
+
+/* ── Navigation ── */
+nav {
+    background: var(--blue);
+}
+
+/* .nav-container {
+  padding: 0 48px;
+} */
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 0;
+    justify-content: center;
+}
+
+.nav-links li a {
+    display: block;
+    padding: 13px 22px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.82);
+    font-family: var(--font-body);
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color var(--transition), background var(--transition);
+    position: relative;
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 22px;
+    right: 22px;
+    height: 2px;
+    background: var(--orange);
+    transform: scaleX(0);
+    transition: transform var(--transition);
+}
+
+.nav-links li a:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.nav-links li a:hover::after {
+    transform: scaleX(1);
+}
+
+/* ── Welcome / Hero Section ── */
+.welcome {
+    position: relative;
+    height: 82vh;
+    min-height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* filter: brightness(0.45) saturate(0.85); */
+}
+
+.welcome::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg,
+            rgba(58, 102, 103, 0.65) 0%,
+            rgba(79, 133, 134, 0.35) 50%,
+            rgba(58, 102, 103, 0.7) 100%);
+    z-index: 1;
+}
+
+.welcome-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 24px;
+    animation: heroFadeIn 1.2s ease both;
+}
+
+.welcome-text h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 300;
+    color: white;
+    letter-spacing: 0.03em;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.welcome-text h1::after {
+    content: '';
+    display: block;
+    width: 56px;
+    height: 3px;
+    background: var(--orange);
+    margin: 22px auto 0;
+    border-radius: 2px;
+}
+
+.welcome-text p {
+    font-family: var(--font-body);
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.82);
+    letter-spacing: 0.08em;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(408px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── Divider / Section Header ── */
+.divider {
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--blue-dark);
+    letter-spacing: 0.05em;
+    padding: 64px 48px 16px;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    display: inline-block;
+    width: 52px;
+    height: 2px;
+    background: var(--orange);
+    vertical-align: middle;
+    margin: 0 18px;
+    border-radius: 1px;
+}
+
+/* ── Staff Section ── */
+.staff-info {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    padding: 24px 48px 80px;
+}
+
+.staff-info>tbody>tr {
+    display: block;
+    background: var(--banner-background);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin-bottom: 28px;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition), transform var(--transition);
+    overflow: hidden;
+}
+
+.staff-info>tbody>tr:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.staff-info>tbody>tr>td {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.staff-member-image {
+    width: 220px;
+    height: 280px;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    filter: grayscale(15%);
+    transition: filter var(--transition);
+}
+
+.staff-info>tbody>tr:hover .staff-member-image {
+    filter: grayscale(0%);
+}
+
+/* Inner staff info table */
+.staff-member-contact-info {
+    border-collapse: collapse;
+    padding: 36px 40px;
+    width: 100%;
+}
+
+.staff-member-contact-info caption {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--blue-dark);
+    text-align: left;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--orange);
+    margin-bottom: 16px;
+    caption-side: top;
+    letter-spacing: 0.03em;
+}
+
+.staff-member-contact-info td {
+    padding: 5px 0;
+    vertical-align: top;
+}
+
+.staff-member-contact-info p {
+    font-size: 20px;
+    color: var(--text-light);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    margin: 0;
+}
+
+.staff-member-contact-info ul {
+    margin: 16px 0 0 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.staff-member-contact-info ul li {
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.staff-member-contact-info ul li::marker {
+    color: var(--orange);
+}
+
+/* ── Footer ── */
+footer {
+    background: var(--blue-dark);
+    border-top: 3px solid var(--orange);
+}
+
+.bottom-div {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bottom-div tbody tr td {
+    padding: 48px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.bottom-div iframe {
+    border-radius: 6px;
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: 380px;
+    opacity: 0.9;
+    filter: grayscale(20%) contrast(1.05);
+    transition: opacity var(--transition), filter var(--transition);
+}
+
+.bottom-div iframe:hover {
+    opacity: 1;
+    filter: none;
+}
+
+#logo {
+    max-width: 180px;
+    height: auto;
+    opacity: 0.85;
+    filter: brightness(10);
+    transition: opacity var(--transition);
+}
+
+#logo:hover {
+    opacity: 1;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .logo-banner-area {
+        /* flex-direction: column; */
+        gap: 12px;
+        padding: 16px 24px;
+        text-align: center;
+    }
+
+    .banner-img {
+        height: 80px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .contact-info {
+        align-items: center;
+    }
+
+    .nav-container {
+        padding: 0 16px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links li a {
+        padding: 10px 14px;
+        font-size: 15px;
+    }
+
+    .welcome {
+        height: 65vh;
+    }
+
+    .divider {
+        padding: 48px 24px 16px;
+        font-size: 1.6rem;
+    }
+
+    .staff-info {
+        padding: 16px 16px 48px;
+    }
+
+    .staff-info>tbody>tr>td {
+        display: block;
+        width: 100%;
+    }
+
+    .staff-member-image {
+        width: 100%;
+        height: 240px;
+    }
+
+    .staff-member-contact-info {
+        padding: 24px;
+    }
+
+    .bottom-div tbody tr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottom-div tbody tr td {
+        padding: 24px 16px;
+    }
+
+    .bottom-div iframe {
+        height: 260px;
+    }
+}
