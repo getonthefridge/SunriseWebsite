@@ -1,0 +1,145 @@
+<!-- 
+TODO
+    * Date picker instead of manual entry/selection
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sunrise Spine | Referrals</title>
+    <meta name="description" content>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="input-form.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+    </style>
+</head>
+
+<header>
+    <div class="logo-banner-area">
+        <img class="banner-img" src="images/logos/ss-logo-horiz.png">
+
+        <div class="contact-info">
+            <a id="phone-number" href="tel:+19042038671">
+                <p>(904) 203-8671</p>
+            </a>
+            <a id="email-address" href="mailto:admin@SunriseSpine.com">
+                <p>admin@SunriseSpine.com</p>
+            </a>
+
+            <a>
+                <!-- <p id="address-txt">
+                        7807 Baymeadows Rd E, Suite 405 Jacksonville Fl, 32256
+                    </p> -->
+            </a>
+        </div>
+
+    </div>
+
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="referrals.html">Referrals</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <h1 id="header-txt">PATIENT REFERRALS</h1>
+
+    <form class="form-card">
+
+        <div class="required-note"><span>*</span> indicates required fields</div>
+
+        <div class="section">
+            <div class="required-section-title">Patient Name *</div>
+            <div class="grid-2">
+                <div>
+                    <input type="text" required>
+                    <div class="sub-label">First</div>
+                </div>
+                <div>
+                    <input type="text" required>
+                    <div class="sub-label">Last</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section grid-2">
+            <div>
+                <div class="required-section-title">Date of Birth *</div>
+                <div class="grid-3">
+                    <input type="date" id="grid-3" min="1900-01-01" max="2018-12-31" />
+                </div>
+            </div>
+
+            <div>
+                <div class="required-section-title">Phone Number *</div>
+                <input type="tel" required>
+            </div>
+        </div>
+
+        <div class="section grid-2">
+            <div>
+                <div class="section-title">Ordering Physician</div>
+                <input type="text">
+            </div>
+            <div>
+                <div class="required-section-title">Ordering Physician Email *</div>
+                <input type="email" required>
+            </div>
+        </div>
+
+        <div class="section grid-2">
+            <div>
+                <div class="section-title">Attorney</div>
+                <input type="text">
+            </div>
+            <div>
+                <div class="section-title">Accident Type</div>
+                <input type="text">
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Claim Information</div>
+            <input type="text">
+        </div>
+
+        <div class="section">
+            <div class="section-title">Reason for Referral</div>
+            <input type="text">
+        </div>
+
+        <div class="section">
+            <div class="section-title">Patient Files</div>
+            <p>Please include patient demographics, any imaging reports and your first and last note for the patient.
+            </p>
+
+            <div class="upload-box">
+                <div>Drop files here or</div>
+                <button type="button">SELECT FILES</button>
+                <input type="file" multiple hidden>
+            </div>
+
+            <div class="file-note">
+                Accepted file types: doc, docx, pdf, pages. Max. file size: 64 MB.
+            </div>
+        </div>
+
+        <button class="submit-btn" type="submit">SUBMIT</button>
+
+    </form>
+
+</body>
+
+</html>

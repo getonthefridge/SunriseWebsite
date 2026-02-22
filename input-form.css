@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #f3f4f6;
+    /* padding: 40px; */
+    color: var(--text);
+}
+
+.form-card {
+    max-width: 1100px;
+    margin: auto;
+    background: #fff;
+    border-radius: 24px;
+    padding: 40px;
+}
+
+.required-note {
+    margin-bottom: 24px;
+    font-size: 14px;
+}
+
+.required-note span {
+    color: var(--orange);
+}
+
+.section {
+    margin-bottom: 28px;
+}
+
+.section-title {
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.required-section-title {
+    color: var(--orange);
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    font-size: 15px;
+}
+
+.sub-label {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.upload-box {
+    border: 2px dashed var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+}
+
+.upload-box button {
+    margin-top: 12px;
+    padding: 10px 22px;
+    border-radius: 999px;
+    border: 1px solid var(--blue);
+    background: white;
+    color: var(--blue);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.file-note {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.submit-btn {
+    margin-top: 30px;
+    padding: 12px 28px;
+    border-radius: 999px;
+    border: 1px solid var(--blue);
+    background: white;
+    color: var(--blue);
+    font-weight: 700;
+    cursor: pointer;
+}
