@@ -78,6 +78,72 @@ header {
     object-fit: contain;
 }
 
+/* 
+
+.feature-strip {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    background: var(--blue-dark);
+    padding: 0;
+    border-top: 3px solid var(--orange);
+    border-bottom: 3px solid var(--orange);
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 32px 40px;
+    flex: 1;
+    min-width: 160px;
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background var(--transition);
+}
+
+.feature-item:last-child {
+    border-right: none;
+}
+
+.feature-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.feature-icon {
+    width: 10px;
+    height: 10px;
+    background: var(--orange);
+    transform: rotate(45deg);
+    opacity: 0.85;
+}
+
+.feature-item span:last-child {
+    font-family: var(--font-body);
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 0.04em;
+}
+
+
+.feature-item b {
+    font-weight: 600;
+    color: var(--orange-light);
+}
+
+@media (max-width: 768px) {
+    .feature-item {
+        flex-basis: 50%;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+} */
+
+
+
+
 .contact-info {
     display: flex;
     flex-direction: column;
@@ -497,7 +563,7 @@ footer {
     height: auto;
 }
 
-#street-address {
+.street-address {
     font-family: var(--font-body);
     font-weight: 300;
     font-size: 20px;

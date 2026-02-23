@@ -8,13 +8,19 @@
     <meta name="description" content>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/services.css">
+    <link rel="stylesheet" href="styles/tiles.css">
     <link rel="stylesheet" href="styles/insurance.css">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
     </style>
+
+
 </head>
+
+
+
+
 
 <header>
     <div class="logo-banner-area">
@@ -49,6 +55,7 @@
 </header>
 
 <body>
+
     <h1 id="header-txt">OUR SERVICES</h1>
     <div>
         <h3 style="margin: 0 auto; text-align: center;">We are trained in the latest techniques in fluoroscopy and
@@ -57,60 +64,97 @@
             nerve stimulation.</h3>
         <br>
     </div>
-    <section class="tiles">
 
 
-        <!-- <br>     -->
-        <article class="tile">
-            <img src="images/tiles/epidural_steroid_injections.webp" alt="Epidural Steroid Injections">
-            <div class="overlay"></div>
-            <h2>Epidural Steroid Injections</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <section class="accordion">
+        <article class="accordion-item">
+            <button class="accordion-header">
+                <span>Epidural Steroid Injections</span>
+                <div class="accordion-icon"></div>
+            </button>
+            <div class="accordion-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
         </article>
 
-        <article class="tile">
-            <img src="images/tiles/radiofrequency_ablation_and_discography.png"
-                alt="Radiofrequency Ablation and Discography">
-            <div class="overlay"></div>
-            <h2>Radiofrequency Ablation</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+        <article class="accordion-item">
+            <button class="accordion-header">
+                <span>Radiofrequency Ablation</span>
+                <div class="accordion-icon"></div>
+            </button>
+            <div class="accordion-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
         </article>
 
-        <article class="tile">
-            <img src="images/tiles/vertebroplasty_kyphoplasty.png" alt="Vertebroplasty and Kyphoplasty">
-            <div class="overlay"></div>
-            <h2>Vertebroplasty & Kyphoplasty</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+        <article class="accordion-item">
+            <button class="accordion-header">
+                <span>Vertebroplasty & Kyphoplasty</span>
+                <div class="accordion-icon"></div>
+            </button>
+            <div class="accordion-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
         </article>
 
-        <article class="tile">
-            <img src="images/tiles/spinal_cord_stimulation.png" alt="Spinal Cord Stimulation">
-            <div class="overlay"></div>
-            <h2>Minimally Invasive Decompression</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+        <article class="accordion-item">
+            <button class="accordion-header">
+                <span>Minimally Invasive Decompression</span>
+                <div class="accordion-icon"></div>
+            </button>
+            <div class="accordion-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
         </article>
 
-        <article class="tile">
-            <img src="images/tiles/stenosis_decompression.png" alt="Spinal Stenosis Decompression">
-            <div class="overlay"></div>
-            <h2>Neck, Back, & Sciatica Pain</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+        <article class="accordion-item">
+            <button class="accordion-header">
+                <span>Neck, Back, & Sciatica Pain</span>
+                <div class="accordion-icon"></div>
+            </button>
+            <div class="accordion-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
         </article>
 
-        <article class="tile">
-            <img src="images/tiles/diagnostic_injections.png" alt="Diagnostic Injections">
-            <div class="overlay"></div>
-            <h2>Diagnostic Injections & Trigger Point Therapy</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+        <article class="accordion-item">
+            <button class="accordion-header">
+                <span>Diagnostic Injections & Trigger Point Therapy</span>
+                <div class="accordion-icon"></div>
+            </button>
+            <div class="accordion-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
         </article>
 
-        <article class="tile">
-            <img src="images/tiles/diagnostic_injections.png" alt="Diagnostic Injections">
-            <div class="overlay"></div>
-            <h2>Comprehensive Multimodal Pain Management</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <article class="accordion-item">
+            <button class="accordion-header">
+                <span>Comprehensive Multimodal Pain Management</span>
+                <div class="accordion-icon"></div>
+            </button>
+            <div class="accordion-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
         </article>
+
     </section>
+
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const isOpen = item.classList.contains('open');
+                document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('open'));
+                if (!isOpen) item.classList.add('open');
+            });
+        });
+    </script>
+
 
     <div class="insurance-section">
         <h2 class="insurance-title">Accepted Insurances</h2>
