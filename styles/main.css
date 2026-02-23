@@ -5,7 +5,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500;600&display=swap');
 
-/* ── Reset & Base ── */
+/*  Reset & Base  */
 *,
 *::before,
 *::after {
@@ -52,7 +52,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* ── Header ── */
+/*  Header  */
 header {
     position: sticky;
     top: 0;
@@ -109,7 +109,7 @@ header {
     margin: 0;
 }
 
-/* ── Navigation ── */
+/*  Navigation  */
 nav {
     background: var(--blue);
 }
@@ -160,7 +160,7 @@ nav {
     transform: scaleX(1);
 }
 
-/* ── Welcome / Hero Section ── */
+/*  Welcome / Hero Section  */
 .welcome {
     position: relative;
     height: 82vh;
@@ -241,7 +241,7 @@ nav {
     }
 }
 
-/* ── Divider / Section Header ── */
+/*  Divider / Section Header  */
 .divider {
     text-align: center;
     font-family: var(--font-display);
@@ -264,7 +264,7 @@ nav {
     border-radius: 1px;
 }
 
-/* ── Staff Section ── */
+/*  Staff Section  */
 .staff-info {
     width: 100%;
     max-width: 960px;
@@ -275,7 +275,8 @@ nav {
 }
 
 .staff-info>tbody>tr {
-    display: block;
+    display: flex;
+    align-items: stretch;
     background: var(--banner-background);
     border: 1px solid var(--border);
     border-radius: 6px;
@@ -291,15 +292,24 @@ nav {
 }
 
 .staff-info>tbody>tr>td {
-    display: inline-block;
+    display: block;
     vertical-align: top;
 }
 
+.staff-info>tbody>tr>td:first-child {
+    flex-shrink: 0;
+}
+
+/* make the info side fill remaining space */
+.staff-info>tbody>tr>td:last-child {
+    flex: 1;
+}
+
 .staff-member-image {
-    width: 220px;
-    height: 280px;
+    width: 260px;
+    height: 100%;
     object-fit: cover;
-    object-position: top center;
+    object-position: center top;
     display: block;
     filter: grayscale(15%);
     transition: filter var(--transition);
@@ -360,7 +370,7 @@ nav {
     color: var(--orange);
 }
 
-/* ── Footer ── */
+/*  Footer  */
 footer {
     background: var(--blue-dark);
     border-top: 3px solid var(--orange);
@@ -394,18 +404,78 @@ footer {
 }
 
 #logo {
-    max-width: 180px;
+    max-width: 50%;
     height: auto;
-    opacity: 0.85;
-    filter: brightness(10);
-    transition: opacity var(--transition);
+    /* opacity: 0.85; */
+    /* filter: brightness(10); */
+    /* transition: opacity var(--transition); */
 }
 
-#logo:hover {
-    opacity: 1;
+
+
+
+
+/*  Scroll down prompt  */
+.scroll-prompt {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    animation: fadeInUp 2s ease 1.5s both;
+    cursor: pointer;
 }
 
-/* ── Responsive ── */
+.scroll-prompt span {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.scroll-arrow {
+    width: 20px;
+    height: 20px;
+    border-right: 2px solid var(--orange);
+    border-bottom: 2px solid var(--orange);
+    transform: rotate(45deg);
+    animation: bounce 1.4s ease infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: rotate(45deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(45deg) translateY(5px);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+
+
+
+/*  Responsive  */
 @media (max-width: 768px) {
     .logo-banner-area {
         /* flex-direction: column; */
