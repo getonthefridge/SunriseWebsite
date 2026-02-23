@@ -27,8 +27,8 @@
             <a id="fax-number">
                 <p>Fax: (904) 449-7645</p>
             </a>
-            <a id="email-address" href="mailto:admin@SunriseSpine.com">
-                <p>admin@SunriseSpine.com</p>
+            <a id="email-address" href="mailto:Admin@SunriseSpine.com">
+                <p>Admin@SunriseSpine.com</p>
             </a>
         </div>
 
@@ -36,12 +36,16 @@
 
     <nav>
         <div class="nav-container">
-            <ul class="nav-links">
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="home-with-picture.html">Home (no vid)</a></li>
                 <li><a href="services.html">Services v1</a></li>
                 <li><a href="services-v2.html">Services v2</a></li>
-                <!-- <li><a href="#">Contact</a></li> -->
                 <li><a href="referrals.html">Referrals</a></li>
             </ul>
         </div>
@@ -116,7 +120,7 @@
         <h2 class="insurance-title">Accepted Insurances</h2>
         <p class="insurance-subtitle">Most insurance plans accepted under payers listed below. Please contact us if you
             don't see yours listed.</p>
-        
+
         <div class="insurance-grid">
 
             <div class="insurance-item">
@@ -168,6 +172,23 @@
             </div>
         </div>
     </div>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            navLinks.classList.toggle('open');
+        });
+
+        // Close menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                navLinks.classList.remove('open');
+            });
+        });
+    </script>
 </body>
 
 <footer>
@@ -182,7 +203,7 @@
                 <a>
                     <p>Fax: (904) 449-7645</p>
                 </a>
-                <a href="mailto:admin@SunriseSpine.com">admin@SunriseSpine.com</a>
+                <a href="mailto:Admin@SunriseSpine.com">Admin@SunriseSpine.com</a>
             </div>
         </div>
         <div class="footer-map">

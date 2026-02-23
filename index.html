@@ -1,9 +1,9 @@
 <!-- TODO
-* Compare with brochure
-                        * Fix footer
+            * Compare with brochure
+                                        * Fix footer
 * Brooke's info
 * Lauren info?
-* Mobile layout
+            * Mobile layout
 * HIPAA compliant form submission 
 -->
 
@@ -35,22 +35,25 @@
             <a id="fax-number">
                 <p>Fax: (904) 449-7645</p>
             </a>
-            <a id="email-address" href="mailto:admin@SunriseSpine.com">
-                <p>admin@SunriseSpine.com</p>
+            <a id="email-address" href="mailto:Admin@SunriseSpine.com">
+                <p>Admin@SunriseSpine.com</p>
             </a>
-            <!-- <p class="street-address">7807 Baymeadows Rd E Suite 405,<br>Jacksonville, FL 32256</p> -->
         </div>
 
     </div>
 
     <nav>
         <div class="nav-container">
-            <ul class="nav-links">
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="home-with-picture.html">Home (no vid)</a></li>
                 <li><a href="services.html">Services v1</a></li>
                 <li><a href="services-v2.html">Services v2</a></li>
-                <!-- <li><a href="#">Contact</a></li> -->
                 <li><a href="referrals.html">Referrals</a></li>
             </ul>
         </div>
@@ -73,30 +76,7 @@
             </div>
         </div>
     </section>
-<!-- 
-    <div class="feature-strip">
-        <div class="feature-item">
-            <span class="feature-icon"></span>
-            <span><b>Transportation</b> Available</span>
-        </div>
-        <div class="feature-item">
-            <span class="feature-icon"></span>
-            <span><b>Spanish</b> Speaking Staff</span>
-        </div>
-        <div class="feature-item">
-            <span class="feature-icon"></span>
-            <span><b>Flexible</b> Scheduling</span>
-        </div>
-        <div class="feature-item">
-            <span class="feature-icon"></span>
-            <span>Open on <b>Saturdays</b></span>
-        </div>
-        <div class="feature-item">
-            <span class="feature-icon"></span>
-            <span>Records Every <b>6 Weeks</b></span>
 
-        </div>
-    </div> -->
 
     <div class="divider"><br>Meet Our Staff<br></div>
     <div>
@@ -138,6 +118,7 @@
 
 
                 <tr>
+                    <td><img class="staff-member-image" src="images/headshots/blank-picture.png"></td>
                     <td>
                         <table class="staff-member-contact-info">
                             <caption>APRN Brooke Margol</caption>
@@ -168,12 +149,61 @@
                             </tr>
                         </table>
                     </td>
-                    <td><img class="staff-member-image" src="images/headshots/blank-picture.png"></td>
+                </tr>
+
+                <tr>
+                    <td><img class="staff-member-image" src="images/headshots/aches.png" style="filter: brightness(1.5);"></td>
+                    <td>
+                        <table class="staff-member-contact-info">
+                            <caption>Lauren Caudle, Practice Manager</caption>
+                            <tr>
+                                <td>
+                                    <p>Phone: (xxx) xxx-xxxx</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <p>E-Mail: Admin@SunriseSpine.com</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+
+                                    </p>
+                                    <ul>
+                                        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                                        <li>Voluptatem aperiam vitae obcaecati doloribus sequi.</li>
+                                        <li>reprehenderit cumque reiciendis tempore in</li>
+                                        <li>soluta dolorum voluptas perspiciatis rerum saepe esse id blanditiis velit
+                                            nihil?</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
                 </tr>
             </tbody>
         </table>
     </div>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
 
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            navLinks.classList.toggle('open');
+        });
+
+        // Close menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                navLinks.classList.remove('open');
+            });
+        });
+    </script>
 </body>
 
 <footer>
@@ -188,7 +218,7 @@
                 <a>
                     <p>Fax: (904) 449-7645</p>
                 </a>
-                <a href="mailto:admin@SunriseSpine.com">admin@SunriseSpine.com</a>
+                <a href="mailto:Admin@SunriseSpine.com">Admin@SunriseSpine.com</a>
             </div>
         </div>
         <div class="footer-map">
@@ -196,7 +226,7 @@
                 src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d684.0041676190401!2d-81.50924816284129!3d30.23236829334569!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzDCsDEzJzU2LjMiTiA4McKwMzAnMzIuNyJX!5e0!3m2!1sen!2sus!4v1769790047006!5m2!1sen!2sus"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
-            <p class="street-address">7807 Baymeadows Rd E Suite 405,<br>Jacksonville, FL 32256</p>
+            <p class="street-address">7807 Baymeadows Rd E Suite 405 Jacksonville, FL 32256</p>
         </div>
     </div>
     <div class="footer-bottom">
