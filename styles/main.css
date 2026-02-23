@@ -293,7 +293,7 @@ nav {
 
 .staff-info>tbody>tr>td {
     display: block;
-    vertical-align: top;
+    /* vertical-align: top; */
 }
 
 .staff-info>tbody>tr>td:first-child {
