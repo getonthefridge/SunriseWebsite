@@ -54,12 +54,19 @@ body {
 
 /* Header */
 header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
     background: var(--banner-background);
     box-shadow: 0 2px 16px rgba(79, 133, 134, 0.1);
     transition: box-shadow var(--transition);
+}
+
+/* Push body down so content doesn't hide behind fixed header */
+body {
+    padding-top: 140px;
 }
 
 .logo-banner-area {
