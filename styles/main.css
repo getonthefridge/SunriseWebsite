@@ -59,15 +59,32 @@ header {
     z-index: 100;
     background: var(--banner-background);
     box-shadow: 0 2px 16px rgba(79, 133, 134, 0.1);
+    transition: box-shadow var(--transition);
 }
 
 .logo-banner-area {
-    /* flex-direction: column; */
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 16px 48px;
     border-bottom: 1px solid var(--border);
+    max-height: 120px;
+    opacity: 1;
+    overflow: hidden;
+    transition: max-height 0.2s ease, padding 0.2s ease, opacity 0.15s ease;
+}
+
+header.scrolled .logo-banner-area {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+    opacity: 0;
+    transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.2s ease;
+}
+
+header.scrolled {
+    box-shadow: 0 2px 20px rgba(79, 133, 134, 0.2);
 }
 
 .banner-img {
@@ -642,12 +659,27 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
 
-    /* ── Header ── */
+    /* ── Scrolling Header ── */
     .logo-banner-area {
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
         padding: 14px 20px;
         text-align: center;
+        max-height: 160px;
+        opacity: 1;
+        overflow: hidden;
+        transition: max-height 0.2s ease, padding 0.2s ease, opacity 0.15s ease;
+    }
+
+    header.scrolled .logo-banner-area {
+        max-height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+        opacity: 0;
+        transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.2s ease;
     }
 
     .banner-img {
@@ -658,7 +690,12 @@ footer {
     }
 
     .contact-info {
+        display: flex;
+        flex-direction: row;
         align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
     }
 
     .contact-info a {
