@@ -4,16 +4,18 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Sunrise Spine | Referrals</title>
+        <title>Sunrise Spine | Services</title>
         <meta name="description" content>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="styles/input-form.css">
+        <link rel="stylesheet" href="styles/services.css">
+        <link rel="stylesheet" href="styles/insurance.css">
         <link rel="icon" type="image/x-icon" href="images/logos/ss-logo-stripped.png">
 
         <style>
         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
     </style>
+
     </head>
 
     <header>
@@ -52,91 +54,82 @@
     </header>
 
     <body>
-        <h1 id="header-txt">PATIENT REFERRALS</h1>
+        <h1 id="header-txt">Conditions We Treat</h1>
 
-        <form class="form-card">
+        <section class="services-list">
+            <ul>
+                <li>Neck Pain and Whiplash Injury</li>
+                <li>Mid Back Pain and Rib Pain</li>
+                <li>Low Back Pain</li>
+                <li>Discogenic Pain</li>
+                <li>Muscle Spasms</li>
+                <li>Sciatica and Radiculopathy</li>
+                <li>Sacroiliac Joint Pain</li>
+                <li>Shoulder Pain & Rotator Cuff Injuries</li>
+                <li>Hip Pain</li>
+                <li>Knee Pain</li>
+                <li>Nerve Injuries</li>
+                <li>Compression Fracture</li>
+            </ul>
+        </section>
+        <!-- 
 
-            <div class="required-note"><span>*</span> indicates required fields</div>
 
-            <div class="section">
-                <div class="required-section-title">Patient Name *</div>
-                <div class="grid-2">
-                    <div>
-                        <input type="text" required>
-                        <div class="sub-label">First</div>
-                    </div>
-                    <div>
-                        <input type="text" required>
-                        <div class="sub-label">Last</div>
-                    </div>
+         -->
+        <h1 id="header-txt">Our Services</h1>
+        <div>
+            <h3 style="margin: 0 auto; text-align: center;">Our providers are trained in the latest fluoroscopy and ultrasound guided pain procedures
+                and remain committed to ongoing education to stay current with advancements in the field.</h3>
+        </div>
+
+        <section class="services-list">
+            <ul>
+                <li>Epidural Steroid Injections</li>
+                <li>Sacroiliac Joint Injections</li>
+                <li>Trigger Point Injections</li>
+                <li>Shoulder, Hip, and Kneee Injections</li>
+                <li>Radiofrequency Ablation</li>
+                <li>Diagnostic Nerve Blocks</li>
+                <li>Intercostal Nerve Blocks</li>
+                <li>Minimally Invasive Decompression</li>
+                <li>Viadisc Intradiscal Treatment</li>
+                <li>PRP/Stem Cells</li>
+                <li>Kyphoplasty</li>
+                <li>Non-Opioid Medication Management</li>
+            </ul>
+        </section>
+
+        <div class="insurance-section">
+            <h2 class="insurance-title">Accepted Insurances</h2>
+            <p class="insurance-subtitle">This will be removed when the website launches</p>
+
+            <div class="insurance-grid">
+
+                <div class="insurance-item">
+                    <p class="insurance-name">PIP Auto Insurance</p>
+                </div>
+
+                <div class="insurance-item">
+                    <p class="insurance-name">UHC</p>
+                </div>
+
+                <div class="insurance-item">
+                    <p class="insurance-name">FL Blue / Anthem BCBS</p>
+                </div>
+
+                <div class="insurance-item">
+                    <p class="insurance-name">Aetna</p>
+                </div>
+
+                <div class="insurance-item">
+                    <p class="insurance-name">Cigna</p>
+                </div>
+
+                <div class="insurance-item">
+                    <p class="insurance-name">Humana</p>
                 </div>
             </div>
-
-            <div class="section grid-2">
-                <div>
-                    <div class="required-section-title">Date of Birth *</div>
-                    <div class="grid-3">
-                        <input type="date" id="grid-3" min="1900-01-01" max="2018-12-31" />
-                    </div>
-                </div>
-
-                <div>
-                    <div class="required-section-title">Phone Number *</div>
-                    <input type="tel" required>
-                </div>
-            </div>
-
-            <div class="section grid-2">
-                <div>
-                    <div class="section-title">Ordering Physician</div>
-                    <input type="text">
-                </div>
-                <div>
-                    <div class="required-section-title">Ordering Physician Email *</div>
-                    <input type="email" required>
-                </div>
-            </div>
-
-            <div class="section grid-2">
-                <div>
-                    <div class="section-title">Attorney</div>
-                    <input type="text">
-                </div>
-                <div>
-                    <div class="section-title">Accident Type</div>
-                    <input type="text">
-                </div>
-            </div>
-
-            <div class="section">
-                <div class="section-title">Claim Information</div>
-                <input type="text">
-            </div>
-
-            <div class="section">
-                <div class="section-title">Reason for Referral</div>
-                <input type="text">
-            </div>
-
-            <div class="section">
-                <div class="section-title">Patient Files</div>
-                <p>Please include patient demographics, any imaging reports and your first and last note for the patient.
-                </p>
-
-                <div class="upload-box">
-                    <div>Drop files here or</div>
-                    <button type="button">SELECT FILES</button>
-                    <input type="file" multiple hidden>
-                </div>
-
-                <div class="file-note">
-                    Accepted file types: doc, docx, pdf, pages. Max. file size: 64 MB.
-                </div>
-            </div>
-
-            <button class="submit-btn" type="submit">SUBMIT</button>
-
-        </form>
+        </div>
         <script>
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('nav-links');

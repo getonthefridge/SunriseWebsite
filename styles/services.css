@@ -1,5 +1,24 @@
 /* services.css */
 
+/* #header-txt {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 2.4rem;
+    color: var(--blue-dark);
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding: 52px 24px 8px;
+}
+
+#header-txt::after {
+    content: '';
+    display: block;
+    width: 56px;
+    height: 3px;
+    background: var(--orange);
+    margin: 16px auto 0;
+    border-radius: 2px;
+} */
 #header-txt {
     font-family: var(--font-display);
     font-weight: 400;
@@ -20,8 +39,8 @@
     border-radius: 2px;
 }
 
-/* ── Intro Text ── */
-body > div h3 {
+
+body>div h3 {
     max-width: 680px;
     margin: 24px auto 0;
     text-align: center;
@@ -33,83 +52,42 @@ body > div h3 {
     padding: 0 24px;
 }
 
-/* ── Tile Grid ── */
-.tiles {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    max-width: 1100px;
+
+
+
+.services-list {
+    max-width: 780px;
     margin: 48px auto 80px;
     padding: 0 32px;
 }
 
-/* ── Individual Tile ── */
-.tile {
-    background: var(--banner-background);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    transition: transform var(--transition), box-shadow var(--transition);
-    cursor: default;
-    position: relative;
+.services-list ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
-.tile:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-}
-
-.tile img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
-    filter: grayscale(15%);
-}
-
-.tile:hover img {
-    transform: scale(1.04);
-    filter: grayscale(0%);
-}
-
-/* The overlay div in your HTML isn't needed with this approach,
-   but keeping it harmless just in case */
-.overlay {
-    display: none;
-}
-
-.tile h2 {
+.services-list ul li {
     font-family: var(--font-body);
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--text);
+    letter-spacing: 0.03em;
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--border);
+    border-left: 3px solid transparent;
+    transition: border-left-color var(--transition),
+        background var(--transition),
+        color var(--transition);
+}
+
+.services-list ul li:first-child {
+    border-top: 1px solid var(--border);
+}
+
+.services-list ul li:hover {
+    border-left-color: var(--orange);
+    background: var(--blue-muted);
     color: var(--blue-dark);
-    padding: 20px 20px 8px;
-    border-top: 3px solid var(--orange);
-}
-
-.tile p {
-    font-family: var(--font-body);
-    font-size: 0.88rem;
-    font-weight: 300;
-    color: var(--text-light);
-    line-height: 1.7;
-    padding: 0 20px 24px;
-}
-
-/* ── Responsive ── */
-@media (max-width: 900px) {
-    .tiles {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 560px) {
-    .tiles {
-        grid-template-columns: 1fr;
-        padding: 0 16px;
-    }
 }
