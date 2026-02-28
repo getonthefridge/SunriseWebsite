@@ -124,11 +124,12 @@ header.scrolled {
     color: var(--blue);
 }
 
-.contact-info a#phone-number p {
+.contact-info a.phone-number p {
     font-size: 20px;
     font-weight: 600;
     color: var(--blue);
 }
+
 
 .contact-info p {
     margin: 0;
@@ -563,32 +564,151 @@ footer {
     height: auto;
 }
 
-.location-description {
-    padding-top: 2vh;
-    font-family: var(--font-body);
-    font-weight: 300;
-    font-size: 20px;
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto 12px;
+
+.location-display {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 64px 48px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
 
-.street-address {
-    font-family: var(--font-body);
-    font-weight: 300;
-    font-size: 20px;
-    color: rgba(255, 255, 255, 0.6);
-    text-align: center;
+.location-top {
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
+
+.office-picture {
+    width: 50%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 3px var(--orange), 0 0 0 6px var(--blue-muted), var(--shadow-md);
+    filter: grayscale(10%);
+    transition: filter var(--transition);
+}
+
+.office-picture:hover {
+    filter: grayscale(0%);
+}
+
+.location-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Location-specific contact info — isolated from header .contact-info */
+.location-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.location-contact a {
+    text-decoration: none;
+    text-align: center;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text-light);
+    letter-spacing: 0.02em;
+    transition: color var(--transition);
+}
+
+.location-contact a:hover {
+    color: var(--blue);
+}
+
+.location-contact a.phone-number-location {
+    font-weight: 600;
+    color: var(--blue);
+}
+
+.location-contact a p {
+    margin: 0;
+}
+
 
 .street-address-fullscreen {
     font-family: var(--font-body);
-    font-weight: 300;
-    font-size: 30px;
-    padding-top: 2.5%;
-    /* color: rgba(255, 255, 255, 0.6); */
-    text-align: center;
+
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--blue-dark);
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+    padding-left: 16px;
 }
+
+.location-description {
+    text-align: center;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: var(--text-light);
+    line-height: 1.8;
+    padding-left: 19px;
+}
+
+.location-description b {
+    color: var(--blue-dark);
+    font-weight: 600;
+}
+
+.location-map {
+    width: 100%;
+    padding: 0;
+    margin: 0 -48px;
+    width: calc(100% + 96px);
+}
+
+.location-map iframe {
+    width: 100%;
+    display: block;
+    height: 360px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: var(--shadow-md);
+    filter: grayscale(20%) contrast(1.05);
+    transition: filter var(--transition);
+}
+
+.location-map iframe:hover {
+    filter: none;
+}
+
+
+@media (max-width: 768px) {
+    .location-display {
+        padding: 40px 20px 60px;
+        gap: 24px;
+    }
+
+    .location-top {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .office-picture {
+        width: 100%;
+        height: 220px;
+    }
+
+    .street-address-fullscreen {
+        font-size: 1.4rem;
+    }
+
+    .location-map iframe {
+        height: 260px;
+    }
+}
+
 
 .footer-info p {
     font-family: var(--font-body);
@@ -709,7 +829,7 @@ footer {
         font-size: 15px;
     }
 
-    .contact-info a#phone-number p {
+    .contact-info a.phone-number p {
         font-size: 15px;
     }
 
