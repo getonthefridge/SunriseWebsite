@@ -708,6 +708,11 @@ footer {
     .location-map iframe {
         height: 260px;
     }
+
+    .location-map {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
 }
 
 
@@ -764,9 +769,6 @@ footer {
 .footer-map-fullscreen iframe {
     width: 100%;
     height: 75vh;
-    /* padding-top: 5%; */
-    padding-left: 5%;
-    padding-right: 5%;
 }
 
 .footer-bottom {
