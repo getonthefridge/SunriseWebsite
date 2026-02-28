@@ -551,13 +551,7 @@ footer {
     flex: 1;
 }
 
-/* .footer-info-center {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    flex: 1;
-} */
+
 
 #logo {
     max-width: 220px;
@@ -565,14 +559,6 @@ footer {
 }
 
 
-.location-display {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 64px 48px 80px;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-}
 
 .location-top {
     display: flex;
@@ -596,124 +582,25 @@ footer {
     filter: grayscale(0%);
 }
 
-.location-info {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
+
+
+
+
+
+/*  */
 
 /* Location-specific contact info — isolated from header .contact-info */
-.location-contact {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin-top: 4px;
-}
-
-.location-contact a {
-    text-decoration: none;
-    text-align: center;
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    font-weight: 400;
-    color: var(--text-light);
-    letter-spacing: 0.02em;
-    transition: color var(--transition);
-}
-
-.location-contact a:hover {
-    color: var(--blue);
-}
-
-.location-contact a.phone-number-location {
-    font-weight: 600;
-    color: var(--blue);
-}
-
-.location-contact a p {
-    margin: 0;
-}
+/*  */
 
 
-.street-address-fullscreen {
-    font-family: var(--font-body);
-    text-align: center;
-
-    font-size: 1.8rem;
-    font-weight: 400;
-    color: var(--blue-dark);
-    line-height: 1.4;
-    letter-spacing: 0.03em;
-    padding-left: 16px;
-}
-
-.location-description {
-    text-align: center;
-    font-family: var(--font-body);
-    font-size: 0.95rem;
-    font-weight: 300;
-    color: var(--text-light);
-    line-height: 1.8;
-    padding-left: 19px;
-}
-
-.location-description b {
-    color: var(--blue-dark);
-    font-weight: 600;
-}
-
-.location-map {
-    width: 100%;
-    padding: 0;
-    margin: 0 -48px;
-    width: calc(100% + 96px);
-}
-
-.location-map iframe {
-    width: 100%;
-    display: block;
-    height: 360px;
-    border: 0;
-    border-radius: 0;
-    box-shadow: var(--shadow-md);
-    filter: grayscale(20%) contrast(1.05);
-    transition: filter var(--transition);
-}
-
-.location-map iframe:hover {
-    filter: none;
-}
 
 
-@media (max-width: 768px) {
-    .location-display {
-        padding: 40px 20px 60px;
-        gap: 24px;
-    }
 
-    .location-top {
-        flex-direction: column;
-        gap: 24px;
-    }
 
-    .office-picture {
-        width: 100%;
-        height: 220px;
-    }
 
-    .street-address-fullscreen {
-        font-size: 1.4rem;
-    }
 
-    .location-map iframe {
-        height: 260px;
-    }
 
-    .location-map {
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-}
+
 
 
 .footer-info p {
@@ -766,10 +653,7 @@ footer {
     filter: none;
 }
 
-.footer-map-fullscreen iframe {
-    width: 100%;
-    height: 75vh;
-}
+
 
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);

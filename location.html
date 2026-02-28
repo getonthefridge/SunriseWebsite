@@ -8,6 +8,8 @@
     <meta name="description" content>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/multiple-locations.css">
+
     <link rel="icon" type="image/x-icon" href="images/logos/ss-logo-stripped.png">
 
     <style>
@@ -42,7 +44,6 @@
             </button>
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <!-- <li><a href="index-with-vid.html">Home (with vid)</a></li> -->
                 <li><a href="conditions-and-treatments.html">Conditions & Treatments</a></li>
                 <li><a href="referrals.html">Referrals</a></li>
                 <li><a href="location.html">Location</a></li>
@@ -52,10 +53,79 @@
 </header>
 
 <body>
-    <div class="footer-map-fullscreen">
+    <section class="locations-section">
+        <div class="location-card">
+            <img class="location-card-img" src="images/office_placeholder.jpg" alt="Baymeadows Office">
+            <div class="location-card-body">
+                <h3 class="location-card-title">Baymeadows</h3>
+                <p class="location-card-address">7807 Baymeadows Rd E, Suite 405<br>Jacksonville, FL 32256</p>
+                <p class="location-card-description">Located in the Baymeadows <b>East</b> neighborhood near Jax Town
+                    Center
+                    and Gate Pkwy, about a mile from I-295.</p>
+                <div class="location-card-contact">
+                    <a href="tel:+19044497643">Phone: (904) 449-7643</a>
+                    <a>Fax: (904) 449-7645</a>
+                </div>
+            </div>
+            <div class="location-card-map-wrapper location-card-map">
+
+                <iframe class="location-card-map"
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d49135.395679763176!2d-81.52811987918196!3d30.235973632653273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzDCsDEzJzU2LjMiTiA4McKwMzAnMzIuNyJX!5e0!3m2!1sen!2sus!4v1771991208893!5m2!1sen!2sus"
+                    allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="locations-section">
+        <div class="location-card">
+            <img class="location-card-img" src="images/office_placeholder.jpg" alt="Baymeadows Office">
+            <div class="location-card-body">
+                <h3 class="location-card-title">Baymeadows</h3>
+                <p class="location-card-address">7807 Baymeadows Rd E, Suite 405<br>Jacksonville, FL 32256</p>
+                <p class="location-card-description">Located in the Baymeadows <b>East</b> neighborhood near Jax Town
+                    Center
+                    and Gate Pkwy, about a mile from I-295.</p>
+                <div class="location-card-contact">
+                    <a href="tel:+19044497643">Phone: (904) 449-7643</a>
+                    <a>Fax: (904) 449-7645</a>
+                </div>
+            </div>
+            <div class="location-card-map-wrapper location-card-map">
+
+                <iframe class="location-card-map"
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d49135.395679763176!2d-81.52811987918196!3d30.235973632653273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzDCsDEzJzU2LjMiTiA4McKwMzAnMzIuNyJX!5e0!3m2!1sen!2sus!4v1771991208893!5m2!1sen!2sus"
+                    allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="location-card">
+            <img class="location-card-img" src="images/office_placeholder.jpg" alt="Baymeadows Office">
+            <div class="location-card-body">
+                <h3 class="location-card-title">Baymeadows</h3>
+                <p class="location-card-address">7807 Baymeadows Rd E, Suite 405<br>Jacksonville, FL 32256</p>
+                <p class="location-card-description">Located in the Baymeadows <b>East</b> neighborhood near Jax Town
+                    Center
+                    and Gate Pkwy, about a mile from I-295.</p>
+                <div class="location-card-contact">
+                    <a href="tel:+19044497643">Phone: (904) 449-7643</a>
+                    <a>Fax: (904) 449-7645</a>
+                </div>
+            </div>
+            <div class="location-card-map-wrapper location-card-map">
+
+                <iframe class="location-card-map"
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d49135.395679763176!2d-81.52811987918196!3d30.235973632653273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzDCsDEzJzU2LjMiTiA4McKwMzAnMzIuNyJX!5e0!3m2!1sen!2sus!4v1771991208893!5m2!1sen!2sus"
+                    allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
 
 
+    </section>
 
+    <!-- <div class="footer-map-fullscreen">
         <div class="location-display">
             <div class="location-top">
                 <img class="office-picture" src="images/office_placeholder.jpg" alt="Sunrise Spine Office">
@@ -66,12 +136,12 @@
                             <p>Phone: (904) 449-7643</p>
                         </a>
                         <a class="fax-number-location">
-                            <p>Fax: (904) 449-7645</p> 
+                            <p>Fax: (904) 449-7645</p>
                         </a>
                     </div>
                     <p class="location-description">We are located in the Baymeadows <b>East</b> neighborhood near Jax
                         Town Center and Gate Pkwy, about a mile from I-295.</p>
-                    
+
                 </div>
             </div>
             <div class="location-map">
@@ -81,13 +151,7 @@
                 </iframe>
             </div>
         </div>
-
-
-
-
-
-
-    </div>
+    </div> -->
 
     <script>
         window.addEventListener('scroll', () => {
