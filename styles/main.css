@@ -637,6 +637,7 @@ footer {
 
 .street-address-fullscreen {
     font-family: var(--font-body);
+    text-align: center;
 
     font-size: 1.8rem;
     font-weight: 400;
