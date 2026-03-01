@@ -552,6 +552,14 @@ footer {
     flex: 1;
 }
 
+.street-address {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 20px;
+    color: var(--cream);
+    text-align: center;
+}
+
 
 
 #logo {
