@@ -384,7 +384,7 @@ nav {
     font-size: 2.5rem;
     font-weight: 500;
     color: var(--blue-dark);
-    text-align: left;
+    text-align: center;
     padding-bottom: 12px;
     border-bottom: 2px solid var(--orange);
     margin-bottom: 16px;
