@@ -54,7 +54,11 @@
 <body>
     <h1 id="header-txt">PATIENT REFERRALS</h1>
 
-    <form class="form-card">
+    <form   class="form-card" 
+            action=""
+            autocomplete="off" 
+            spellcheck="false" 
+            autocorrect="off">
 
         <div class="required-note"><span>*</span> indicates required fields</div>
 
@@ -62,11 +66,11 @@
             <div class="required-section-title">Patient Name *</div>
             <div class="grid-2">
                 <div>
-                    <input type="text" required>
+                    <input type="text" required autocomplete="off" spellcheck="false" autocorrect="off">
                     <div class="sub-label">First</div>
                 </div>
                 <div>
-                    <input type="text" required>
+                    <input type="text" required autocomplete="off" spellcheck="false" autocorrect="off">
                     <div class="sub-label">Last</div>
                 </div>
             </div>
@@ -76,24 +80,24 @@
             <div>
                 <div class="required-section-title">Date of Birth *</div>
                 <div class="grid-3">
-                    <input type="date" id="grid-3" min="1900-01-01" max="2018-12-31" />
+                    <input type="date" id="grid-3" min="1900-01-01" max="2018-12-31"  autocomplete="off" spellcheck="false" autocorrect="off"/>
                 </div>
             </div>
 
             <div>
                 <div class="required-section-title">Phone Number *</div>
-                <input type="tel" required>
+                <input type="tel" required autocomplete="off" spellcheck="false" autocorrect="off">
             </div>
         </div>
 
         <div class="section grid-2">
             <div>
                 <div class="required-section-title">Ordering Physician *</div>
-                <input type="text" required>
+                <input type="text" required autocomplete="off" spellcheck="false" autocorrect="off">
             </div>
             <div>
                 <div class="required-section-title">Ordering Physician Email *</div>
-                <input type="email" required>
+                <input type="email" required autocomplete="off" spellcheck="false" autocorrect="off">
             </div>
         </div>
 
@@ -104,18 +108,18 @@
             </div>
             <div>
                 <div class="section-title">Accident Type</div>
-                <input type="text">
+                <input type="text" autocomplete="off" spellcheck="false" autocorrect="off">
             </div>
         </div>
 
         <div class="section">
             <div class="section-title">Claim Information</div>
-            <input type="text">
+            <input type="text" autocomplete="off" spellcheck="false" autocorrect="off">
         </div>
 
         <div class="section">
             <div class="required-section-title">Reason for Referral *</div>
-            <input type="text" required>
+            <input type="text" required autocomplete="off" spellcheck="false" autocorrect="off">
         </div>
 
         <div class="section">
@@ -126,7 +130,7 @@
             <div class="upload-box">
                 <div>Drop files here or</div>
                 <button type="button">SELECT FILES</button>
-                <input type="file" multiple hidden>
+                <input type="file" multiple hidden autocomplete="off" spellcheck="false" autocorrect="off">
             </div>
 
             <div class="file-note">
