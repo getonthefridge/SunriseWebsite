@@ -425,7 +425,9 @@ nav {
 
 .staff-member-contact-info .staff-bio {
     text-indent: 30px;
-    padding-left: 5px;
+    text-align: justify;
+    padding-left: 15px;
+    padding-right: 15px;
     font-size: 0.9rem;
     color: var(--text);
     font-weight: 300;
