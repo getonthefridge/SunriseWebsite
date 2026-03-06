@@ -682,7 +682,7 @@ footer {
 
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 829px) {
 
     /* ── Scrolling Header ── */
     .logo-banner-area {
@@ -882,7 +882,7 @@ footer {
     }
 
     .footer-map iframe {
-        height: 220px;
+        height: 400px;
     }
 
     .footer-bottom {
