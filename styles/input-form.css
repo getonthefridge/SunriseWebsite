@@ -123,6 +123,28 @@ input[type="date"]:focus {
     background: white;
 }
 
+
+textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: var(--text);
+    background: var(--cream);
+    transition: border-color var(--transition), box-shadow var(--transition);
+    outline: none;
+    resize: vertical;
+}
+
+textarea:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(79, 133, 134, 0.12);
+    background: white;
+}
+
 /* ── Upload Box ── */
 .upload-box {
     border: 2px dashed var(--border);
