@@ -92,13 +92,11 @@ header.scrolled {
 }
 
 .banner-img {
-    /* height: 1%; */
     max-width: 50%;
     max-height: 75px;
     width: auto;
     object-fit: contain;
 }
-
 
 .contact-info {
     display: flex;
@@ -126,7 +124,6 @@ header.scrolled {
     font-weight: 600;
     color: var(--blue);
 }
-
 
 .contact-info p {
     margin: 0;
@@ -353,7 +350,6 @@ nav {
     object-position: center top;
     display: block;
     transition: filter var(--transition);
-
 }
 
 .staff-info>tbody>tr:hover .staff-member-image {
@@ -423,46 +419,6 @@ nav {
     margin-top: 8px;
 }
 
-
-
-.bottom-div {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.bottom-div tbody tr td {
-    padding: 48px;
-    vertical-align: middle;
-    text-align: center;
-}
-
-.bottom-div iframe {
-    border-radius: 6px;
-    display: block;
-    width: 100%;
-    max-width: 600px;
-    height: 380px;
-    opacity: 0.9;
-    filter: grayscale(20%) contrast(1.05);
-    transition: opacity var(--transition), filter var(--transition);
-}
-
-.bottom-div iframe:hover {
-    opacity: 1;
-    filter: none;
-}
-
-#logo {
-    max-width: 50%;
-    height: auto;
-    justify-content: center;
-    align-self: center;
-}
-
-
-
-
-
 /* Scroll down prompt */
 .scroll-prompt {
     position: absolute;
@@ -520,7 +476,6 @@ nav {
     }
 }
 
-
 /* Footer */
 footer {
     background: var(--blue-dark);
@@ -547,7 +502,6 @@ footer {
     text-align: center;
 }
 
-
 .street-address {
     font-family: var(--font-body);
     font-weight: 300;
@@ -556,38 +510,10 @@ footer {
     text-align: center;
 }
 
-
-
 #logo {
     max-width: 220px;
     height: auto;
 }
-
-
-
-.location-top {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.office-picture {
-    width: 50%;
-    height: 300px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 8px;
-    flex-shrink: 0;
-    box-shadow: 0 0 0 3px var(--orange), 0 0 0 6px var(--blue-muted), var(--shadow-md);
-    filter: grayscale(10%);
-    transition: filter var(--transition);
-}
-
-.office-picture:hover {
-    filter: grayscale(0%);
-}
-
-
 
 .footer-info p {
     font-family: var(--font-body);
@@ -639,7 +565,6 @@ footer {
     color: white;
 }
 
-
 .footer-map {
     flex: 1;
     max-width: 500px;
@@ -665,8 +590,6 @@ footer {
     filter: none;
 }
 
-
-
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
@@ -680,7 +603,6 @@ footer {
     color: rgba(255, 255, 255, 0.35);
     letter-spacing: 0.05em;
 }
-
 
 /* Responsive */
 @media (max-width: 829px) {
@@ -801,9 +723,6 @@ footer {
         display: none;
     }
 
-
-
-
     /* ── Hero ── */
     .welcome {
         height: 60vh;
@@ -851,7 +770,6 @@ footer {
         object-position: center top;
         margin-left: auto;
         margin-right: auto;
-
     }
 
     .staff-member-contact-info {

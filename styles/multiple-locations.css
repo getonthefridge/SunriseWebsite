@@ -11,18 +11,19 @@
 
 .location-card {
     background: var(--banner-background);
-    border: 1px solid var(--border);
+    border: 3px solid var(--orange);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: var(--shadow-sm);
     display: flex;
     flex-direction: column;
-    transition: box-shadow var(--transition), transform var(--transition);
+    transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
 }
 
 .location-card:hover {
     box-shadow: var(--shadow-md);
     transform: translateY(-2px);
+    border-color: var(--blue);
 }
 
 .location-card-img {
@@ -98,21 +99,6 @@
     color: var(--blue);
 }
 
-.location-card:hover {
-    border: 3px solid var(--blue);
-}
-
-.location-card {
-    border: 3px solid var(--orange);
-}
-
-
-
-
-
-
-
-
 .location-card-map {
     width: 100%;
     height: 200px;
@@ -125,8 +111,6 @@
 .location-card:hover .location-card-map {
     filter: none;
 }
-
-
 
 /* ── Single location — fullscreen layout ── */
 .location-card:only-child {
