@@ -413,7 +413,7 @@ nav {
     text-align: justify;
     padding-left: 15px;
     padding-right: 15px;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     color: var(--text);
     font-weight: 300;
     line-height: 1.8;
@@ -633,8 +633,8 @@ footer {
         margin-right: auto;
     }
 
-    .staff-member-contact-info caption {
-        font-size: 30px;
+    .staff-member-contact-info .staff-bio {
+        font-size: 20px;
     }
 }
 
@@ -808,12 +808,12 @@ footer {
         padding: 20px;
     }
 
-    .staff-member-contact-info caption {
-        font-size: 20px;
-    }
-
     .staff-member-contact-info p {
         font-size: 15px;
+    }
+
+    .staff-member-contact-info .staff-bio {
+        font-size: 1.05rem;
     }
 
     /* ── Footer ── */
