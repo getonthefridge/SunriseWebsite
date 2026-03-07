@@ -763,9 +763,8 @@ footer {
     }
 
     .staff-member-image {
-        width: 75%;
+        width: 100%;
         height: auto;
-        max-height: 350px;
         object-fit: cover;
         object-position: center top;
         margin-left: auto;
