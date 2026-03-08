@@ -305,12 +305,12 @@ nav {
 
 /* Staff Section */
 .staff-info {
-  width: 100%;
-  max-width: 80%;
-  margin: 0 auto;
-  border-collapse: separate;
-  border-spacing: 0;
-  padding: 24px 48px 80px;
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    padding: 24px 48px 80px;
 }
 
 .staff-info>tbody>tr {
@@ -608,9 +608,20 @@ footer {
 
 
 
+
 /* Responsive */
+@media (min-width: 450px) {
+
+    /* Scroll down prompt */
+    /* TODO: make this scale to the right position based on screen width/height */
+    .scroll-prompt {
+        display: none;
+    }
+}
+
 
 @media (max-width: 1126px) {
+
     /* ── Staff ── */
     .staff-info {
         padding: 12px 12px 40px;
